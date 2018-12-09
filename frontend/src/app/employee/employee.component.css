@@ -1,0 +1,94 @@
+.logo {
+    position: absolute;
+    top: 16px;
+    margin-left: 5%;
+}
+
+.login-logout {
+    cursor: pointer;
+    float: right;
+    margin-right: 5%;
+    top: 10px;
+}
+
+.username-logout-font {
+    color: #4b85b7;
+    margin-right: 20px;
+    font-size: 1.5em;
+    display: inline-block;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+.username-style {
+    margin-right: 20px
+}
+
+.back-button {
+    position: absolute;
+    top: 120px;
+    margin-left: 5%;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #4b85b7;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+.loader {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    stroke: #4b85b7;
+}
+
+.main-bubble {
+    position: absolute;
+    top: 250px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.image-bubble {
+    width: 50%;
+    max-width: 300px;
+    min-width: 100px;
+    margin-right: 5%;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.photo {
+    width: 100%;
+}
+
+.list-bubble {
+    width: auto;
+    display: inline-block;
+}
+
+.record-list {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 860px) {
+
+    .username-logout-font {
+        font-size: 1em;
+    }
+
+    .back-button {
+        font-size: 1em;
+    }
+}
+
+@font-face {
+    font-family:'EurostileLTPro-Ex2';
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.eot');
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0-.eot#iefix') format('embedded-opentype'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.woff') format('woff'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.ttf') format('truetype')
+}

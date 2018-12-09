@@ -1,0 +1,19 @@
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:700i' );
+@import url( 'https://fonts.googleapis.com/css?family=Open+Sans:600i,400i' );
+
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.smartui:before {
+    content:'';
+    height:225px;
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:0;
+    min-width:100%;
+    background:linear-gradient(to bottom,#e6e6e6 0,#f6f6f6 80%,#fff 100%,#fff 100%)
+}

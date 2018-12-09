@@ -1,0 +1,33 @@
+<mat-spinner *ngIf="isLoading" class="loader" color="primary"></mat-spinner>
+<mat-card *ngIf="!isLoading" class="login-form">
+    <div *ngIf="isError" class="error-status">
+        <strong>Error!</strong> {{errorMessage}}
+    </div>
+    <mat-card-content>
+        <form>
+            <table class="inputs-table">
+                <tr class="inputs">
+                    <td>
+                        <mat-form-field class="inputs">
+                            <input matInput placeholder="Username" [(ngModel)]="username"
+                            name="username" required (focus)="isError = false"
+                            (keyup)="onKeyPressedLogin($event)">
+                        </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <mat-form-field class="inputs">
+                            <input matInput placeholder="Password" [(ngModel)]="password"
+                            type="password" name="password" required (focus)="isError = false"
+                            (keyup)="onKeyPressedPassword($event)" #passwd>
+                        </mat-form-field>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </mat-card-content>
+    <mat-card-actions class="login-button">
+        <button mat-raised-button (click)="login()">Login</button>
+    </mat-card-actions>
+ </mat-card>

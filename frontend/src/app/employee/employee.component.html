@@ -1,0 +1,27 @@
+<div>
+    <img src="https://drive.google.com/uc?id=15r8lNdNvx-GjVb62G1BYZUCwkHpG5Cwp&authuser=0&export=download" alt="logo" height="100"
+    class="logo">
+    <div class="login-logout">
+            <div class="username-logout-font username-style" (click)="onSelectUser()">
+                {{username}}
+            </div>
+            <div class="username-logout-font" (click)="onLogInLogOut()">
+                <u>{{loginLogout}}</u>
+            </div>
+    </div>
+</div>
+<div class="back-button" (click)="returnBack()">
+    <u>&lt; Back</u>
+</div>
+<mat-spinner *ngIf="isLoading" class="loader" color="primary"></mat-spinner>
+<div class="main-bubble" *ngIf="!isLoading">
+    <div class="image-bubble">
+        <img src="data:image/jpg;base64,{{record.jpegPhoto}}" alt="Employee Photo"
+        class="photo">
+    </div>
+    <div class="list-bubble">
+        <ul class="record-list">
+            <li *ngFor="let t of title"><b class="title-font">{{t.name}}:</b> {{record[t.shortcut]}}</li>
+        </ul>
+    </div>
+</div>

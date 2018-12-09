@@ -1,0 +1,277 @@
+.logo {
+    position: absolute;
+    top: 16px;
+    margin-left: 5%;
+}
+
+.records-table {
+    width: 100%;
+}
+
+.centrylized {
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+
+/deep/ .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #4b85b7;
+}
+
+.login-logout {
+    cursor: pointer;
+    float: right;
+    margin-right: 5%;
+    top: 10px;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+.username-logout-font {
+    color: #4b85b7;
+    margin-right: 20px;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+.username-style {
+    margin-right: 20px
+}
+
+.viewmode-search-bubble {
+    position: absolute;
+    top: 120px;
+    width: 90%;
+    margin-left: 5%;
+}
+
+.viewmode-bubble {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    size: 1.5em;
+    margin-right: 5%;
+    transform: scale(1.5);
+}
+
+.viewmode-text {
+    text-align: center;
+    margin-bottom: 1%;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+/deep/ .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
+    background-color: rgba(68,133,183,0.5);
+}
+
+/deep/ .mat-slide-toggle.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
+    background-color: #4b85b7;
+}
+
+/deep/ .mat-slide-toggle-content {
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+.search {
+    display: inline-block;
+    width: 55%;
+    margin-left: 5%;
+    margin-right: 33%;
+}
+
+.search-input {
+    width: 80%;
+    height: 34px;
+    padding: 6px 12px;
+    margin-right: 1%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    margin-bottom: 7px;
+    color: #4b85b7;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+/deep/ .mat-form-field.mat-focused .mat-form-field-label {
+    color: #4b85b7;
+}
+
+/deep/ .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #4b85b7;
+}
+
+.search-button {
+    width: 100px;
+    height: 40px;
+    border-radius: 10% 10%;
+    background-color: #4b85b7;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+/deep/ .mat-button-wrapper {
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+.filter-select {
+  width: max-content;
+  font-size: 1.1em;
+  color: rgb(105, 105, 105);
+  border: 1px solid #ccc;
+  border-top: none;
+  /*so things don't jump around*/
+  position: absolute;
+  overflow-y: auto;
+  background: #fff;
+  z-index: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 2px;
+  margin-left: 6px;
+  cursor: pointer;
+  font-family: 'Open Sans', sans-serif;
+  box-shadow: 5px 5px 40px 0px rgba(75,133,183,1);
+}
+
+.filter-select-list {
+    background: #fff;
+    color: #000;
+}
+
+.selected-item {
+    background: #4b85b7;
+    color: #fff;
+}
+
+.id-head-font {
+    width: 37px;
+}
+
+.th-style {
+    color: #000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: #fff;
+    border-color: #4b85b7;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.th-td-font {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: auto;
+    max-width: 20px;
+    padding-right: 5px;
+}
+
+.th-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.td-font {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+.tr-selection {
+    background: rgba(0,0,0,0);
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #4b85b7;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.tr-selection:hover {
+    box-shadow: 0px 0px 10px 3px #4b85b7;
+    cursor: pointer;
+}
+
+
+.table-container {
+    position: absolute;
+    top: 225px;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.image-record-box {
+    display: inline-block;
+    width: 40%;
+    max-width: 300px;
+    min-width: 100px;
+    margin-left: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0px 0px 0px #4b85b7;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.image-record-box:hover {
+    box-shadow: 0px 0px 10px 5px #4b85b7;
+    cursor: pointer;
+}
+
+.base64-img {
+    width: 100%;
+    max-height: 300px;
+}
+
+.image-record-box-font{
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.animate-bottom {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+    -webkit-animation-name: animate-bottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animate-bottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animate-bottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+@media only screen and (max-width: 860px) {
+    .th-td-font {
+        max-width: none;
+    }
+
+    .username-logout-font {
+        font-size: 1em;
+    }
+
+    .viewmode-bubble {
+        size: 1em;
+        transform: none;
+    }
+
+    .search-button {
+        width: 97px;
+        height: 30px;
+        line-height: 0;
+        min-width: 0;
+    }
+}
+
+@font-face {
+    font-family:'EurostileLTPro-Ex2';
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.eot');
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0-.eot#iefix') format('embedded-opentype'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.woff') format('woff'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.ttf') format('truetype')
+}

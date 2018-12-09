@@ -1,0 +1,100 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<div>
+    <img src="https://drive.google.com/uc?id=15r8lNdNvx-GjVb62G1BYZUCwkHpG5Cwp&authuser=0&export=download" alt="logo" height="100"
+    class="logo">
+    <div class="login-logout">
+            <div class="username-logout-font username-style" (click)="onSelectUser()">
+                {{username}}
+            </div>
+            <div class="username-logout-font" (click)="onLogInLogOut()">
+                <u>{{loginLogout}}</u>
+            </div>
+    </div>
+</div>
+<div>
+    <div class="viewmode-search-bubble">
+        <div class="search">
+            <div>
+                <mat-form-field class="search-input">
+                    <input matInput type="text" placeholder="Search Line" [(ngModel)]="searchLine"
+                    [formControl]="searchField" autocomplete="off" (blur)="onFocusInput()"
+                    (keydown)="onKeyPressed($event)"
+                    [ngStyle]="{'color': isWrongSearch ? 'red' : '#555'}">
+                    <button mat-button *ngIf="searchLine" matSuffix mat-icon-button
+                    aria-label="Clear" (click)="searchLine=''">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                </mat-form-field>
+                <button mat-flat-button color="primary" class="search-button"
+                (click)="onSendSearch()">
+                    Search
+                </button>
+            </div>
+            <div class="filter-select" *ngIf="isShowDropdown"
+            (mouseleave)="selectedItemId=-1; isUnderDropBox = false"
+            (mouseenter)="isUnderDropBox=true">
+                <div *ngFor="let item of searchItems; index as id" (click)="onSelectItem(id)"
+                [ngClass]="isSelected(id) ? 'selected-item' : 'filter-select-list'"
+                (mouseenter)="selectedItemId=id">
+                    <div *ngIf="id<10">
+                        {{item}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="viewmode-bubble">
+            <div class="viewmode-text"><b>View Mode</b><br></div>
+            <mat-slide-toggle color="#4b85b7" [checked]="viewMode === 'Graphic'"
+            (change)="onChangeMode($event)">
+                {{viewMode}}
+            </mat-slide-toggle>
+        </div>
+    </div>
+    <mat-spinner *ngIf="isLoading" class="centrylized"></mat-spinner>
+    <div class="table-container animateBottom" *ngIf="!isLoading">
+        <table mat-table [dataSource]="records" matSort (matSortChange)="onSort($event)"
+        matSortActive="{{sortHeader}}" matSortDirection="{{sortOrder}}"
+        *ngIf="viewMode === 'Simple'" class="records-table">
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef class="id-head-font th-style th-font">No.</th>
+                <td mat-cell *matCellDef="let element" class="id-head-font td-font">
+                    {{element.id}}
+                </td>
+            </ng-container>
+
+            <ng-container *ngFor="let c of columns" matColumnDef="{{c.shortcut}}">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header
+                class="th-td-font th-style th-font" matTooltip="{{c.name}}"
+                [matTooltipShowDelay]="1000">
+                    {{c.name}}
+                </th>
+                <td mat-cell *matCellDef="let element" class="th-td-font td-font"
+                matTooltip="{{element[c.shortcut]}}" [matTooltipShowDelay]="1000">
+                    {{element[c.shortcut]}}
+                </td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr (click)="onSelect(row)" class="tr-selection" mat-row
+            *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+        <div *ngIf="viewMode === 'Graphic'">
+            <div *ngFor=" let r of records" class="image-record-box" (click)="onSelect(r)">
+                <img src="data:image/jpg;base64,{{r.jpegPhoto}}" alt="Employee Photo"
+                class="base64-img">
+                <div matTooltip="{{r.givenName}}" [matTooltipShowDelay]="1000"
+                class="image-record-box-font">
+                    <b class="title-font">Name:</b> {{r.givenName}}
+                </div>
+                <div matTooltip="{{r.title}}" [matTooltipShowDelay]="1000"
+                class="image-record-box-font">
+                    <b class="title-font">Position:</b> {{r.title}}
+                </div>
+            </div>
+        </div>
+        <mat-paginator [length]="recordsLength" [pageIndex]="curPageNum - 1" [pageSize]="pageCount"
+        (page)="onChangePage($event)" [pageSizeOptions]="pageSizeOptions" showFirstLastButtons>
+        </mat-paginator>
+    </div>
+
+</div>
