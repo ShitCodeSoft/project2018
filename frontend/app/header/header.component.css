@@ -1,0 +1,42 @@
+.logo {
+    position: absolute;
+    top: 16px;
+    margin-left: 2.5%;
+    width: 35%;
+    max-height: 100px;
+    max-width: 278.156px;
+    cursor: pointer;
+}
+
+.username {
+    cursor: pointer;
+    color: #4b85b7;
+    float: right;
+    margin-right: calc(2.5% + 25px);
+    top: 10px;
+    font-size: 1.5em;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+.settings {
+    position:absolute;
+    cursor: pointer;
+    color: #4b85b7;
+    right: 0;
+    margin-right: 2.5%;
+    top: 5px;
+    font-size: 1.5em;
+    font-family: 'EurostileLTPro-Ex2';
+    min-width: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 860px) {
+	.username {
+        font-size: 1em;
+    }
+
+    .settings {
+        top: 0;
+    }
+}

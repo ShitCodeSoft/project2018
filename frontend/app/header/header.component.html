@@ -1,0 +1,19 @@
+<div>
+    <div (click)="onLogo()">
+        <img src="https://drive.google.com/uc?id=15r8lNdNvx-GjVb62G1BYZUCwkHpG5Cwp&authuser=0&export=download" alt="logo" class="logo">
+    </div>
+    <div class="username" (click)="onSelectUser()">
+        {{username}}
+    </div>
+    <div>
+        <button mat-button [matMenuTriggerFor]="menu" class="settings">
+            <mat-icon>settings</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu" overlapTrigger="false">
+            <div (mouseleave)="closeSettingsMenu()">
+                <button mat-menu-item (click)="onSelectSettings()">Settings</button>
+                <button mat-menu-item (click)="onLogOut()">Log out</button>
+            </div>
+        </mat-menu>
+    </div>
+</div>

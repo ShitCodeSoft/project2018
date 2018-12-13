@@ -1,0 +1,35 @@
+<app-header></app-header>
+<div class="back-button" (click)="returnBack()">
+    <u>&lt; Back</u>
+</div>
+<div class="edit-button" *ngIf="isEditable">
+    <button  mat-stroked-button [disabled]="isSaving" (click)="onEdit()" class="buttons">Edit</button>
+</div>
+<mat-spinner *ngIf="isLoading" class="loader" color="primary"></mat-spinner>
+<div class="main-bubble" *ngIf="!isLoading">
+    <div class="image-bubble">
+        <img src="{{photo}}" alt="Employee Photo"
+        class="photo">
+    </div>
+    <div class="list-bubble">
+        <ul class="record-list">
+            <div *ngIf="isSuccess" class="success-status">
+                <strong>Success!</strong> {{responseMsg}}
+            </div>
+            <div *ngIf="isError" class="error-status">
+                <strong>Error!</strong> {{responseMsg}}
+            </div>
+            <li *ngFor="let t of title">
+                <div *ngIf="!isEdit">
+                    <b class="title-font">{{t.name}}: </b>{{t.data}}
+                </div>
+                <div *ngIf="isEdit">
+                    <b class="title-font">{{t.name}}: </b><mat-form-field class="edit-text"><input matInput [(ngModel)]="t.data" (focus)="isError = false; isSuccess = false" required [placeholder]="t.is_editable == 0 ? '' : 'Input ' + t.name" value="{t.data}" [disabled]="t.is_editable == 0 ? true : false"></mat-form-field>
+                </div>
+            </li>
+        </ul>
+        <div class="save-button" *ngIf="isEdit">
+            <button  mat-stroked-button (click)="onSave()" [disabled]="isSaving" class="buttons">Save</button>
+        </div>
+    </div>
+</div>

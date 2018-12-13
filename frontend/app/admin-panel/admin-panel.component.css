@@ -1,0 +1,19 @@
+.main-bubble {
+    position: absolute;
+    top: 200px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+/deep/ .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+	background-color: #4b85b7;
+}
+
+.large-box {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 16px;
+	padding: 16px;
+	border-radius: 8px;
+}

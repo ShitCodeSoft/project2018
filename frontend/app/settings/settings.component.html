@@ -1,0 +1,38 @@
+<app-header></app-header>
+<mat-spinner *ngIf="isLoading" class="centrylized"></mat-spinner>
+<div *ngIf="!isLoading" class="settings-bubble">
+	<div class="main-topic">
+		<h1>Settings</h1>
+	</div>
+	<div class="subtopic">
+		<mat-card>
+			<mat-card-content>
+				<h2>Table View</h2>
+				<section class="item" *ngFor="let f of fieldsInfo">
+					<mat-checkbox [checked]="f.set === 1" (change)="onCheckedChange(f, $event)" [disabled]="isSaving">{{f.name}}</mat-checkbox>
+				</section>
+				<div *ngIf="isSuccess" class="success-status">
+        			<strong>Success!</strong> {{responseMsg}}
+    			</div>
+    			<div *ngIf="isError" class="error-status">
+        			<strong>Error!</strong> {{responseMsg}}
+    			</div>
+				<button mat-stroked-button class="buttons" (click)="onSaveSettings()" [disabled]="isSaving">
+					Save
+				</button>
+			</mat-card-content>
+		</mat-card>
+	</div>
+	<div class="subtopic">
+		<mat-card>
+			<mat-card-content>
+				<h2>Account management</h2>
+				<section class="item">
+					<button mat-stroked-button class="buttons" (click)="onChangePassword()">
+						Change password
+					</button>
+				</section>
+			</mat-card-content>
+		</mat-card>
+	</div>
+</div>

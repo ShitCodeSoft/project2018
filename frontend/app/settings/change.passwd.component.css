@@ -1,0 +1,65 @@
+.topic {
+	font-family: 'EurostileLTPro-Ex2';
+}
+
+.subtopics {
+	font-family: 'Roboto', sans-serif;
+}
+
+.inputs {
+	width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.buttons {
+	font-family: 'EurostileLTPro-Ex2';
+	color: #4b85b7;
+	float: right;
+}
+
+
+/deep/ .mat-form-field.mat-focused .mat-form-field-label {
+    color: #4b85b7;
+}
+
+/deep/ .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #4b85b7;
+}
+
+.success-status {
+    color: #40ab27;
+    background-color: #def2e0;
+    border-color: #00ff73;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.error-status {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@font-face {
+    font-family:'EurostileLTPro-Ex2';
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.eot');
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0-.eot#iefix') format('embedded-opentype'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.woff') format('woff'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.ttf') format('truetype')
+}

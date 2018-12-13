@@ -1,0 +1,130 @@
+.back-button {
+    position: absolute;
+    top: 120px;
+    margin-left: 5%;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #4b85b7;
+    font-family: 'EurostileLTPro-Ex2';
+}
+
+.edit-button {
+    position: absolute;
+    top: 120px;
+    right: 5%;
+    font-family: 'EurostileLTPro-Ex2';
+    color: #4b85b7;
+}
+
+.save-button {
+    float: right;
+    margin-right: 5%;
+    font-family: 'EurostileLTPro-Ex2';
+    color: #4b85b7;
+}
+
+.edit-text {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.success-status {
+    color: #40ab27;
+    background-color: #def2e0;
+    border-color: #00ff73;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.error-status {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/deep/ .mat-form-field.mat-focused .mat-form-field-label {
+    color: #4b85b7;
+}
+
+/deep/ .mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: #4b85b7;
+}
+
+.loader {
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    stroke: #4b85b7;
+}
+
+.main-bubble {
+    position: absolute;
+    top: 250px;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.image-bubble {
+    width: 50%;
+    max-width: 300px;
+    min-width: 100px;
+    margin-right: 5%;
+    margin-left: 30px;
+    display: inline-block;
+}
+
+.photo {
+    width: 100%;
+}
+
+.list-bubble {
+    width: auto;
+    display: inline-block;
+}
+
+.record-list {
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+/deep/ .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #4b85b7;
+}
+
+@media only screen and (max-width: 860px) {
+
+    .username-logout-font {
+        font-size: 1em;
+    }
+
+    .back-button {
+        font-size: 1em;
+    }
+}
+
+@font-face {
+    font-family:'EurostileLTPro-Ex2';
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.eot');
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0-.eot#iefix') format('embedded-opentype'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.woff') format('woff'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.ttf') format('truetype')
+}

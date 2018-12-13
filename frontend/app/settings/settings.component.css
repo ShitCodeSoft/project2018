@@ -1,0 +1,97 @@
+.centrylized {
+    position: fixed;
+    top: calc(50% - 50px);
+    left: calc(50% - 50px);
+}
+
+/deep/ .mat-progress-spinner circle, .mat-spinner circle {
+    stroke: #4b85b7;
+}
+
+.settings-bubble {
+	position: relative;
+	top: 120px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from { bottom:-100px; opacity:0 }
+    to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom {
+    from{ bottom:-100px; opacity:0 }
+    to{ bottom:0; opacity:1 }
+}
+
+.main-topic {
+	font-family: 'EurostileLTPro-Ex2';
+}
+
+.subtopic {
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 40px;
+}
+
+.item {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.buttons {
+	font-family: 'EurostileLTPro-Ex2';
+	color: #4b85b7;
+}
+
+/deep/ .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+    background: #4b85b7;
+}
+
+.success-status {
+    color: #40ab27;
+    background-color: #def2e0;
+    border-color: #00ff73;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.error-status {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+}
+
+@media only screen and (max-width: 860px) {
+    .settings-bubble {
+        font-size: 50%;
+    }
+}
+
+@font-face {
+    font-family:'EurostileLTPro-Ex2';
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.eot');
+    src:url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0-.eot#iefix') format('embedded-opentype'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.woff') format('woff'),
+    url('https://portaone.r.worldssl.net/fonts/28E7C5_1_0.ttf') format('truetype')
+}
